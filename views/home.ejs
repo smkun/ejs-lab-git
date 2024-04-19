@@ -1,0 +1,13 @@
+<%- include('./partials/head.ejs', { title: 'Page Title' }) %>
+<body>
+  <%- include('./partials/nav') %>
+  <h1><%= restaurant.name %></h1>
+  <p>Address: <%= restaurant.address %></p>
+  <p>Phone: <%= restaurant.phone %></p>
+  <% if (restaurant.isOpen) { %>
+    <p>Yes we are open!</p>
+  <% } else { %>
+    <p>Sorry, we are closed.</p>
+  <% } %>
+</body>
+</html>
